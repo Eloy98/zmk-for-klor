@@ -25,19 +25,13 @@
 #define ADJUST 3
 
 
-/ {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
+&mt {
+    quick-tap-ms = <100>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+};
 
-    };
+/ {
 
      combos {
             compatible = "zmk,combos";
@@ -57,7 +51,7 @@
 
                 base_layer {
 // ┌───────────────────────────────────────────────────────────┐
-label= "BASE"                                                  ;
+display-name= "BASE"                                                  ;
 // └───────────────────────────────────────────────────────────┘
 /*           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
              │    Q    │    W    │    F    │    P    │    G    │                    │    J    │    L    │    U    │    Y    │    ;    │   
@@ -71,7 +65,7 @@ label= "BASE"                                                  ;
  bindings = <
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷
               &kp Q     &kp W     &kp F     &kp P     &kp G                          &kp J     &kp L     &kp U     &kp Y     &kp SEMI
-    &kp TAB   &kp A     &kp R     &kp S   &hm LSHFT T &kp D                          &kp H   &hm RSHFT N &kp E     &kp I     &kp O     &kp SQT
+    &kp TAB   &kp A     &kp R     &kp S   &mt LSHFT T &kp D                          &kp H   &mt RSHFT N &kp E     &kp I     &kp O     &kp SQT
     &kp DEL   &kp Z     &kp X     &kp C     &kp V     &kp B     &trans     &trans    &kp K     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp BSLH
                                   &kp LCTRL &mo LOWER &kp SPACE &kp LALT   &kp LGUI  &kp RET   &mo RAISE &kp BSPC    
                         >;
@@ -83,7 +77,7 @@ label= "BASE"                                                  ;
 
                 lower_layer {
 // ┌───────────────────────────────────────────────────────────┐
-label= "LOWER"                                                 ;
+display-name= "LOWER"                                                 ;
 // └───────────────────────────────────────────────────────────┘
 /*           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
              │         │         │    UP   │         │    {    │                    │    }    │    7    │    8    │    9    │    +    │
@@ -109,7 +103,7 @@ label= "LOWER"                                                 ;
 
                 raise_layer {
 // ┌───────────────────────────────────────────────────────────┐
-label= "RAISE"                                                 ;
+display-name= "RAISE"                                                 ;
 // └───────────────────────────────────────────────────────────┘
 /*           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
              │         │         │         │         │         │                    │         │         │    Ü    │         │         │
@@ -135,7 +129,7 @@ label= "RAISE"                                                 ;
 
                 adjust_layer {
 // ┌───────────────────────────────────────────────────────────┐
-label= "ADJUST"                                                ;
+display-name= "ADJUST"                                                ;
 // └───────────────────────────────────────────────────────────┘
 /*           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
              │         │         │         │         │         │                    │         │         │         │         │         │
