@@ -61,10 +61,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-         &kp Q  &kp W  &kp F             &kp P           &kp G                          &kp J    &kp L            &kp U      &kp Y    &kp SEMI
-&kp TAB  &kp A  &kp R  &kp S             &mt LSHFT T     &kp D                          &kp H    &mt RSHFT N      &kp E      &kp I    &kp O     &kp SQT
-&kp DEL  &kp Z  &kp X  &kp C             &kp V           &kp B      &trans    &trans    &kp K    &kp M            &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                       &ext_power EP_ON  &rgb_ug RGB_ON  &kp SPACE  &kp LALT  &kp LGUI  &kp RET  &rgb_ug RGB_EFF  &kp BSPC
+                   &rgb_ug RGB_ON   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI   &rgb_ug RGB_BRI  &rgb_ug RGB_EFF                      &kp J    &kp L            &kp U      &kp Y    &kp SEMI
+&ext_power EP_ON   &rgb_ug RGB_OFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD   &rgb_ug RGB_BRD  &rgb_ug RGB_EFR                      &kp H    &mt RSHFT N      &kp E      &kp I    &kp O     &kp SQT
+&ext_power EP_OFF  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &kp C             &kp V            &kp B            &trans    &trans    &kp K    &kp M            &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
+                                                     &ext_power EP_ON  &rgb_ug RGB_ON   &kp SPACE        &kp LALT  &kp LGUI  &kp RET  &rgb_ug RGB_EFF  &kp BSPC
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
