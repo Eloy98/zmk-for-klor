@@ -6,7 +6,7 @@
 
 #include "klor.dtsi"
 
-&default_transform {
+&polydactyl {
 	col-offset = <6>;
 };
 
